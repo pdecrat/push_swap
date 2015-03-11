@@ -57,11 +57,15 @@ int			main(int ac, char **av)
 	a = NULL;
 	if (ac < 2)
 		ft_perror("Error", 1);
-	ft_check_arg(&av[1]);
-	a = ft_init_pile(&av[1], a);
-	ft_solve(&a, &b, ac - 1);
-	ft_put_pile(a);
-	ft_putchar('\n');
-	ft_put_pile(b);
+	if (ac > 2)
+	{
+		ft_check_arg(&av[1]);
+		a = ft_init_pile(&av[1], a);
+		ft_solve(&a, &b, ac - 1);
+		ft_putchar('\n');
+		ft_put_pile(a);
+		ft_putchar('\n');
+		ft_put_pile(b);
+	}
 	return (0);
 }

@@ -25,16 +25,16 @@ void		ft_split(t_pile **a, t_pile **b, int size)
 		tmp = ft_get_last(*a);
 		if (AVAL <= med)
 		{
-			if ((*a)->prev && APVAL > AVAL && APVAL <= med && tmp->value <= med
+			if ((*a)->prev && APVAL < AVAL && APVAL <= med && tmp->value <= med
 					&& tmp->value > APVAL)
 				ft_sa(a);
-			if ((*a)->prev && APVAL > AVAL && APVAL <= med && tmp->value <= med
+			if ((*a)->prev && APVAL < AVAL && APVAL <= med && tmp->value <= med
 					&& tmp->value < APVAL && tmp->value < AVAL)
 				ft_ra(a);
 			ft_pb(a, b);
 		}
 		else
-			ft_rotate(a);
+			ft_ra(a);
 		++i;
 	}
 }

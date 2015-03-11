@@ -16,10 +16,10 @@ void		ft_push(t_pile **dst, t_pile **src)
 {
 	t_pile		*tmp;
 
-	if (*src && (*src)->prev)
+	if (*src)
 	{
 		tmp = *src;
-		*src = (*src)->prev;
+		*src = ((*src)->prev) ? (*src)->prev : NULL;
 		tmp->prev = *dst;
 		*dst = tmp;
 	}

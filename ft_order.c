@@ -14,17 +14,38 @@
 
 static void		ft_order_b(t_pile **b)
 {
-
+	while (!ft_is_solved_b(*b))
+	{
+		if (BVAL > BPVAL)
+			ft_sb(b);
+		ft_rb(b);
+	}
 }
 
 static void		ft_order_a(t_pile **a)
 {
-
+	while (!ft_is_solved_a(*a))
+	{
+		if (AVAL > APVAL)
+			ft_sa(a);
+		ft_ra(a);
+	}
 }
 
 static void		ft_order_both(t_pile **a, t_pile **b)
 {
-
+	while (!ft_is_solved_a(*a) && !ft_is_solved_b(*b))
+	{
+		if (AVAL > APVAL && BVAL < BPVAL)
+		{
+			ft_ss(a, b);
+			ft_rr(a, b);
+		}
+		else if (AVAL > APVAL && BVAL > BPVAL)
+			ft_rb(b);
+		else if (AVAL < APVAL && BVAL < BPVAL)
+			ft_ra(a);
+	}
 }
 
 void			ft_order(t_pile **a, t_pile **b)
