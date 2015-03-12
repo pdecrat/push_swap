@@ -21,7 +21,8 @@ SRC = main.c \
 	  ft_b_moves.c \
 	  ft_a_moves.c \
 	  ft_both_moves.c \
-	ft_extremities.c
+	  ft_extremities.c \
+	  ft_handle_result.c
 
 INCLUDES = push_swap.h
 

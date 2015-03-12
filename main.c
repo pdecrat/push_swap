@@ -6,7 +6,7 @@
 /*   By: pdecrat <pdecrat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/04 16:14:07 by pdecrat           #+#    #+#             */
-/*   Updated: 2015/03/10 16:48:04 by pdecrat          ###   ########.fr       */
+/*   Updated: 2015/03/12 16:01:53 by pdecrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,9 @@ int			main(int ac, char **av)
 {
 	t_pile		*a;
 	t_pile		*b;
+	char		*result;
 
+	result = NULL;
 	b = NULL;
 	a = NULL;
 	if (ac < 2)
@@ -61,7 +63,7 @@ int			main(int ac, char **av)
 	{
 		ft_check_arg(&av[1]);
 		a = ft_init_pile(&av[1], a);
-		ft_solve(&a, &b, ac - 1);
+		ft_solve(&a, &b, ac - 1, &result);
 	}
 	return (0);
 }

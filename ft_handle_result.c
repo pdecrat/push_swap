@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_a_moves.c                                       :+:      :+:    :+:   */
+/*   ft_handle_result.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdecrat <pdecrat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/10 16:39:07 by pdecrat           #+#    #+#             */
-/*   Updated: 2015/03/12 16:06:25 by pdecrat          ###   ########.fr       */
+/*   Created: 2015/03/12 16:02:01 by pdecrat           #+#    #+#             */
+/*   Updated: 2015/03/12 16:08:24 by pdecrat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		ft_rra(t_pile **a, char **res)
+void	ft_handle_result(char **res, char *to_write)
 {
-	ft_handle_result(res, "rra");
-	ft_rev_rotate(a);
-}
-
-void		ft_ra(t_pile **a, char **res)
-{
-	ft_handle_result(res, "ra");
-	ft_rotate(a);
-}
-
-void		ft_sa(t_pile **a, char **res)
-{
-	ft_handle_result(res, "sa");
-	ft_swap(a);
-}
-
-void		ft_pa(t_pile **a, t_pile **b, char **res)
-{
-	ft_handle_result(res, "pa");
-	ft_push(a, b);
+	if (!*res)
+		*res = ft_strdup(to_write);
+	else
+	{
+		*res = ft_strjoin(*res, " ");
+		*res = ft_strjoin(*res, to_write);
+	}
 }
