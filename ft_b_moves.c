@@ -14,24 +14,24 @@
 
 void		ft_rrb(t_pile **b)
 {
-	ft_putstr("rrb ");
+	ft_putendl("rrb ");
 	ft_rev_rotate(b);
 }
 
 void		ft_rb(t_pile **b)
 {
-	ft_putstr("rb ");
+	ft_putendl("rb ");
 	ft_rotate(b);
 }
 
 void		ft_sb(t_pile **b)
 {
-	ft_putstr("sb ");
+	ft_putendl("sb ");
 	ft_swap(b);
 }
 
 void		ft_pb(t_pile **a, t_pile **b)
 {
-	ft_putstr("pb ");
+	ft_putendl("pb ");
 	ft_push(b, a);
 }

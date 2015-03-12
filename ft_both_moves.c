@@ -14,21 +14,21 @@
 
 void		ft_rrr(t_pile **a, t_pile **b)
 {
-	ft_putstr("rrr ");
+	ft_putendl("rrr ");
 	ft_rev_rotate(a);
 	ft_rev_rotate(b);
 }
 
 void		ft_rr(t_pile **a, t_pile **b)
 {
-	ft_putstr("rr ");
+	ft_putendl("rr ");
 	ft_rotate(a);
 	ft_rotate(b);
 }
 
 void		ft_ss(t_pile **a, t_pile **b)
 {
-	ft_putstr("ss ");
+	ft_putendl("ss ");
 	ft_swap(a);
 	ft_swap(b);
 }

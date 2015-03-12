@@ -64,6 +64,8 @@ void				ft_rrb(t_pile **b);
 void				ft_ss(t_pile **a, t_pile **b);
 void				ft_rr(t_pile **a, t_pile **b);
 void				ft_rrr(t_pile **a, t_pile **b);
+int				ft_is_lowest(t_pile *b);
+int				ft_is_highest(t_pile *a);
 
 void				ft_put_pile(t_pile *p);
 

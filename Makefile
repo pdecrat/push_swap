@@ -20,7 +20,8 @@ SRC = main.c \
 	  ft_order.c \
 	  ft_b_moves.c \
 	  ft_a_moves.c \
-	  ft_both_moves.c
+	  ft_both_moves.c \
+	ft_extremities.c
 
 INCLUDES = push_swap.h
 
@@ -30,8 +31,8 @@ all : $(NAME)
 
 $(NAME) :
 	make -C ./libft
-	gcc -c $(SRC) $(INCLUDES) -L ./libft/ -lft -I libft/
-	gcc -o $(NAME) $(OBJ) $(INCLUDES) -L ./libft -lft -I libft/
+	gcc $(FLAGS) -c $(SRC) $(INCLUDES) -L ./libft/ -lft -I libft/
+	gcc $(FLAGS) -o $(NAME) $(OBJ) $(INCLUDES) -L ./libft -lft -I libft/
 
 clean :
 	make -C ./libft clean

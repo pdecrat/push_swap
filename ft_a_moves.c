@@ -14,24 +14,24 @@
 
 void		ft_rra(t_pile **a)
 {
-	ft_putstr("rra ");
+	ft_putendl("rra ");
 	ft_rev_rotate(a);
 }
 
 void		ft_ra(t_pile **a)
 {
-	ft_putstr("ra ");
+	ft_putendl("ra ");
 	ft_rotate(a);
 }
 
 void		ft_sa(t_pile **a)
 {
-	ft_putstr("sa ");
+	ft_putendl("sa ");
 	ft_swap(a);
 }
 
 void		ft_pa(t_pile **a, t_pile **b)
 {
-	ft_putstr("pa ");
+	ft_putendl("pa ");
 	ft_push(a, b);
 }
